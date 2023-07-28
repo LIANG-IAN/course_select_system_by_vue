@@ -44,14 +44,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20%;
+  height: 15%;
   width: 100%;
   padding: 1rem 5rem;
   background-color: #d1fbf9;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .nav {

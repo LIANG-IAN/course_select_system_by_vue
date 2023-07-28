@@ -49,6 +49,7 @@ export default {
           <th>選修人數</th>
           <th>加選</th>
         </tr>
+
         <tr v-for="(info, key) in courseInfo" :key="key" @click="toggleCheckbox(info)">
           <td>{{ info.courseCode }}</td>
           <td>{{ info.courseName }}</td>
@@ -79,6 +80,7 @@ export default {
 
   button {
     margin-top: .5rem;
+
   }
 
   .table {

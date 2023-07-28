@@ -7,16 +7,29 @@ export default {
   components:{
     HeaderView,
     FooterView
+  },
+  data(){
+    return{
+      path:"",
+      isLogin:true
+    }
+  },
+  mounted() {
+      // this.path = this.$route.path;
+      // if (this.path === "/"){
+      //   this.isLogin= false;
+      // }
   }
 }
+
 </script>
 
 <template>
-  <HeaderView/>
+  <HeaderView v-if="isLogin"/>
     <div class="wrapper">
     <RouterView/>
     </div>
-  <FooterView/>
+  <FooterView v-if="isLogin"/>
 </template>
 
 <style scoped>
@@ -24,8 +37,9 @@ export default {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 65%;
+  height: 70%;
   justify-content: center;
   align-items: center;
 }
+
 </style>

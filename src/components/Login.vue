@@ -31,17 +31,23 @@ computed: {
     <label for="password">密碼</label>
     <input type="password" id="password" autocomplete="none" v-model="password">
     <br>
-    <RouterLink :to="{ name: 'home' }">
+    <RouterLink class="link" :to="{ name: 'home' }">
       <button type="button" @click="push" :disabled="!isInputValid" >登入</button>
     </RouterLink>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
+
 .login {
   width: fit-content;
   border: 1px solid black;
   padding: 2rem;
+
+  .link {
+    text-decoration: none;
+  }
 
   input {
     margin-bottom: 2rem;
